@@ -7,11 +7,17 @@ const config: Config = {
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+    colors: {
+      red: "hsl(7, 100%, 68% )",
+      green: "hsl(153, 71%, 59%)",
+      white: "hsl(0, 0%, 100%)",
+      grey: "hsl(0, 0%, 85%)",
+      "dark-grey": "hsl(0, 0%, 14%)",
+      black: "hsl(0, 0%, 8%)",
+    },
     extend: {
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+      fontFamily: {
+        sans: "var(--space-grotesk-font)",
       },
     },
   },
