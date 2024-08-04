@@ -2,17 +2,39 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  a {
+    @apply text-primary transition duration-200 hover:text-accent;
+  }
+  a svg {
+    @apply h-5 w-5 fill-primary transition duration-200 hover:fill-accent sm:h-[1.5625rem] sm:w-[1.5625rem];
+  }
+}
+
 @layer components {
   .heading-xl {
-    @apply text-[40px] font-bold leading-none -tracking-[1.136px] md:text-[72px] md:-tracking-[2.045px] lg:text-[88px] lg:-tracking-[2.5px];
+    font-size: clamp(2.5rem, 0.76rem + 7.396vw, 5.5rem);
+    letter-spacing: clamp(-0.071rem, -0.0217rem + -0.2102vw, -0.15625rem);
+    @apply font-bold leading-none;
   }
   .heading-lg {
-    @apply text-[32px] font-bold leading-[40px] -tracking-[1px] md:text-[48px] md:leading-[56px] md:-tracking-[1.5px];
+    font-size: clamp(2rem, 1.4222rem + 2.4653vw, 3rem);
+    letter-spacing: clamp(-0.0625rem, -0.0444rem + -0.077vw, -0.09375rem);
+    line-height: clamp(2.5rem, 1.9222rem + 2.4653vw, 3.5rem);
+    @apply font-bold;
   }
   .heading-md {
-    @apply text-[24px] font-bold leading-[32px] tracking-normal;
+    @apply text-[1.5rem] font-bold leading-[2rem] tracking-normal;
   }
   .body-lg {
-    @apply text-base font-medium leading-[26px] tracking-normal md:text-lg md:leading-[28px];
+    font-size: clamp(1rem, 0.9278rem + 0.3082vw, 1.125rem);
+    line-height: clamp(1.625rem, 1.5528rem + 0.3082vw, 1.75rem);
+    @apply font-medium tracking-normal;
+  }
+  .wrapper {
+    @apply mx-auto max-w-[69.375rem] px-4 sm:px-8;
+  }
+  .social-icon {
+    @apply h-5 w-5 fill-primary;
   }
 }

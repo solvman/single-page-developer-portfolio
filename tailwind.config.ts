@@ -8,12 +8,12 @@ const config: Config = {
   ],
   theme: {
     colors: {
-      red: "hsl(7, 100%, 68% )",
-      green: "hsl(153, 71%, 59%)",
-      white: "hsl(0, 0%, 100%)",
-      grey: "hsl(0, 0%, 85%)",
-      "dark-grey": "hsl(0, 0%, 14%)",
-      black: "hsl(0, 0%, 8%)",
+      error: "hsl(7, 100%, 68% )",
+      accent: "hsl(153, 71%, 59%)",
+      primary: "hsl(0, 0%, 100%)",
+      secondary: "hsl(0, 0%, 85%)",
+      "background-primary": "hsl(0, 0%, 8%)",
+      "background-secondary": "hsl(0, 0%, 14%)",
     },
     extend: {
       fontFamily: {
