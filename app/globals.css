@@ -31,7 +31,7 @@
     @apply font-medium tracking-normal;
   }
   .wrapper {
-    @apply mx-auto max-w-[69.375rem] px-4 sm:px-8 lg:px-0;
+    @apply mx-auto max-w-[69.375rem] px-4 sm:px-8 xl:px-0;
   }
   .social-icon {
     @apply h-5 w-5 fill-primary;

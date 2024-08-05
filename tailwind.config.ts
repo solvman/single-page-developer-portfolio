@@ -17,7 +17,7 @@ const config: Config = {
     },
     extend: {
       screens: {
-        lg: "1174px",
+        xl: "1174px",
       },
       fontFamily: {
         sans: "var(--space-grotesk-font)",
