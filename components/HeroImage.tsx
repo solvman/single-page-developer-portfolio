@@ -38,14 +38,15 @@ function HeroImage() {
   });
 
   return (
-    <main>
-      <picture>
-        <source media="(min-width: 1024px)" srcSet={desktop} />
-        <source media="(min-width: 768px)" srcSet={tablet} />
-        <source media="(min-width: 640px)" srcSet={mobile} />
-        <img {...rest} className="h-auto w-[174px] md:w-[350px] lg:w-[445px]" />
-      </picture>
-    </main>
+    <picture>
+      <source media="(min-width: 1024px)" srcSet={desktop} />
+      <source media="(min-width: 640px)" srcSet={tablet} />
+      <source srcSet={mobile} />
+      <img
+        {...rest}
+        className="absolute left-1/2 top-0 -z-20 h-auto w-[174px] -translate-x-1/2 sm:left-auto sm:right-0 sm:w-[322px] sm:translate-x-0 lg:bottom-[68px] lg:top-auto lg:w-[445px]"
+      />
+    </picture>
   );
 }
 export default HeroImage;

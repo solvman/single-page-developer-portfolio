@@ -13,9 +13,8 @@
 
 @layer components {
   .heading-xl {
-    font-size: clamp(2.5rem, 0.76rem + 7.396vw, 5.5rem);
-    letter-spacing: clamp(-0.071rem, -0.0217rem + -0.2102vw, -0.15625rem);
-    @apply font-bold leading-none;
+    font-size: clamp(2.5rem, 0.6405rem + 7.9339vw, 5.5rem);
+    @apply font-bold leading-none -tracking-[1.136px] sm:-tracking-[2.045px] lg:-tracking-[2.5px];
   }
   .heading-lg {
     font-size: clamp(2rem, 1.4222rem + 2.4653vw, 3rem);
@@ -27,12 +26,12 @@
     @apply text-[1.5rem] font-bold leading-[2rem] tracking-normal;
   }
   .body-lg {
-    font-size: clamp(1rem, 0.9278rem + 0.3082vw, 1.125rem);
+    font-size: clamp(1rem, 0.8231rem + 0.7547vw, 1.125rem);
     line-height: clamp(1.625rem, 1.5528rem + 0.3082vw, 1.75rem);
     @apply font-medium tracking-normal;
   }
   .wrapper {
-    @apply mx-auto max-w-[69.375rem] px-4 sm:px-8;
+    @apply mx-auto max-w-[69.375rem] px-4 sm:px-8 lg:px-0;
   }
   .social-icon {
     @apply h-5 w-5 fill-primary;

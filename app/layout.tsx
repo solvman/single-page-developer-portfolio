@@ -19,9 +19,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="overflow-x-hidden">
       <body
-        className={`${spaceGrotesk.variable} body-lg wrapper bg-background-primary font-sans text-primary`}
+        className={`${spaceGrotesk.variable} body-lg bg-background-primary font-sans text-primary`}
       >
         {children}
       </body>
