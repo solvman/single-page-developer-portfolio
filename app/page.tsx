@@ -49,6 +49,7 @@ export default function Home() {
         </div>
       </header>
       <main>
+        {/* Hero Section */}
         <section>
           <div className="wrapper lg:relative lg:pt-[1px]">
             <HeroImage />
@@ -71,7 +72,7 @@ export default function Home() {
                 </span>
                 .
               </h1>
-              <p className="mb-6 sm:mb-9 lg:max-w-[27rem]">
+              <p className="mb-6 text-secondary sm:mb-9 lg:max-w-[27rem]">
                 Based in the UK, I&apos;m a front-end developer passionate about
                 building accessible web apps that users love.
               </p>
@@ -85,17 +86,52 @@ export default function Home() {
             <hr />
           </div>
         </section>
-        HTML 4 Years Experience CSS 4 Years Experience JavaScript 4 Years
-        Experience Accessibility 4 Years Experience React 3 Years Experience
-        Sass 3 Years Experience Projects Contact me Design portfolio HTML CSS
-        View project View code E-learning landing page HTML CSS View project
-        View code Todo web app HTML CSS JavaScript View project View code
-        Entertainment web app HTML CSS JavaScript View project View code Memory
-        Game HTML CSS JavaScript View project View code Art gallery showcase
-        HTML CSS JavaScript View project View code Contact I would love to hear
-        about your project and how I could help. Please fill in the form, and
-        I’ll get back to you as soon as possible. Name Email Message Send
-        message adamkeyes
+        {/* Skills Section */}
+        <section>
+          <h2 className="sr-only">Skills</h2>
+          <div className="wrapper mb-20">
+            <div className="relative grid gap-6 py-10 text-center sm:grid-cols-2 sm:gap-[3.25rem] sm:py-[3.25rem] sm:text-left lg:grid-cols-3 lg:gap-[3.625rem] lg:py-[4.5rem]">
+              <Image
+                src={patternRings}
+                alt=""
+                className="absolute bottom-0 right-0 -z-10 translate-x-1/2 translate-y-1/2 lg:translate-x-3/4 lg:translate-y-0"
+              />
+              <div>
+                <h3 className="heading-lg md:mb-[0.875rem]">HTML</h3>
+                <p className="text-secondary">4 Years Experience</p>
+              </div>
+              <div>
+                <h3 className="heading-lg md:mb-[0.875rem]">HTML</h3>
+                <p className="text-secondary">4 Years Experience</p>
+              </div>
+              <div>
+                <h3 className="heading-lg md:mb-[0.875rem]">CSS</h3>
+                <p className="text-secondary">4 Years Experience</p>
+              </div>
+              <div>
+                <h3 className="heading-lg md:mb-[0.875rem]">JavaScript</h3>
+                <p className="text-secondary">4 Years Experience</p>
+              </div>
+              <div>
+                <h3 className="heading-lg md:mb-[0.875rem]">Accessibility</h3>
+                <p className="text-secondary">4 Years Experience</p>
+              </div>
+              <div>
+                <h3 className="heading-lg md:mb-[0.875rem]">React</h3>
+                <p className="text-secondary">3 Years Experience</p>
+              </div>
+            </div>
+            <hr className="sm:hidden" />
+          </div>
+        </section>
+        Projects Contact me Design portfolio HTML CSS View project View code
+        E-learning landing page HTML CSS View project View code Todo web app
+        HTML CSS JavaScript View project View code Entertainment web app HTML
+        CSS JavaScript View project View code Memory Game HTML CSS JavaScript
+        View project View code Art gallery showcase HTML CSS JavaScript View
+        project View code Contact I would love to hear about your project and
+        how I could help. Please fill in the form, and I’ll get back to you as
+        soon as possible. Name Email Message Send message adamkeyes
       </main>
     </>
   );

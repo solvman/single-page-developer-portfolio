@@ -16,6 +16,9 @@ const config: Config = {
       "background-secondary": "hsl(0, 0%, 14%)",
     },
     extend: {
+      screens: {
+        lg: "1174px",
+      },
       fontFamily: {
         sans: "var(--space-grotesk-font)",
       },

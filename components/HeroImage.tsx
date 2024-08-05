@@ -39,7 +39,7 @@ function HeroImage() {
 
   return (
     <picture>
-      <source media="(min-width: 1024px)" srcSet={desktop} />
+      <source media="(min-width: 1174px)" srcSet={desktop} />
       <source media="(min-width: 640px)" srcSet={tablet} />
       <source srcSet={mobile} />
       <img
