@@ -9,6 +9,15 @@
   a svg {
     @apply h-5 w-5 fill-primary transition duration-200 hover:fill-accent sm:h-[1.5625rem] sm:w-[1.5625rem];
   }
+
+  input[type="text"],
+  input[type="email"],
+  textarea {
+    @apply border-0 border-b border-primary bg-background-secondary px-6 pb-4 text-base font-medium leading-[1.625] -tracking-[0.222px] outline-none placeholder:uppercase placeholder:text-primary/50 focus:border-accent focus:outline-none focus:ring-0;
+  }
+  textarea {
+    @apply h-[6.6875rem] resize-none;
+  }
 }
 
 @layer components {
@@ -35,5 +44,8 @@
   }
   .social-icon {
     @apply h-5 w-5 fill-primary;
+  }
+  .btn-regular {
+    @apply text-base font-bold uppercase leading-[1.625] tracking-[2.286px] underline decoration-accent decoration-2 underline-offset-[10px] transition-all duration-300 hover:text-accent;
   }
 }

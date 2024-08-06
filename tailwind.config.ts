@@ -14,6 +14,7 @@ const config: Config = {
       secondary: "hsl(0, 0%, 85%)",
       "background-primary": "hsl(0, 0%, 8%)",
       "background-secondary": "hsl(0, 0%, 14%)",
+      black: "hsl(0, 0%, 0%)",
     },
     extend: {
       screens: {
@@ -24,6 +25,6 @@ const config: Config = {
       },
     },
   },
-  plugins: [],
+  plugins: [require("@tailwindcss/forms")],
 };
 export default config;

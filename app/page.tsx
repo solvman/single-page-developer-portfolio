@@ -1,13 +1,69 @@
+import Image, { StaticImageData } from "next/image";
+
 import HeroImage from "@/components/HeroImage";
+import ProjectCard from "@/components/ProjectCard";
+import ContactForm from "@/components/ContactForm";
 import {
   IconFrontendMentor,
   IconGitHub,
   IconLinkedIn,
   IconTwitter,
 } from "@/components/Icons";
+
 import patternCircle from "@/assets/images/pattern-circle.svg";
 import patternRings from "@/assets/images/pattern-rings.svg";
-import Image from "next/image";
+import thumbnailProject1 from "@/assets/images/thumbnail-project-1-large.webp";
+import thumbnailProject2 from "@/assets/images/thumbnail-project-2-large.webp";
+import thumbnailProject3 from "@/assets/images/thumbnail-project-3-large.webp";
+import thumbnailProject4 from "@/assets/images/thumbnail-project-4-large.webp";
+import thumbnailProject5 from "@/assets/images/thumbnail-project-5-large.webp";
+import thumbnailProject6 from "@/assets/images/thumbnail-project-6-large.webp";
+
+type ProjectType = {
+  id: number;
+  title: string;
+  description: string;
+  thumbnail: string | StaticImageData;
+};
+
+const projects: ProjectType[] = [
+  {
+    id: 1,
+    title: "Design portfolio",
+    description: "HTML CSS",
+    thumbnail: thumbnailProject1,
+  },
+  {
+    id: 2,
+    title: "E-learning landing page",
+    description: "HTML CSS",
+    thumbnail: thumbnailProject2,
+  },
+  {
+    id: 3,
+    title: "Todo web app",
+    description: "HTML CSS Javascript",
+    thumbnail: thumbnailProject3,
+  },
+  {
+    id: 4,
+    title: "Entertainment web app",
+    description: "HTML CSS Javascript",
+    thumbnail: thumbnailProject4,
+  },
+  {
+    id: 5,
+    title: "Memory Game",
+    description: "HTML CSS Javascript",
+    thumbnail: thumbnailProject5,
+  },
+  {
+    id: 6,
+    title: "Art gallery showcase",
+    description: "HTML CSS Javascript",
+    thumbnail: thumbnailProject6,
+  },
+];
 
 export default function Home() {
   return (
@@ -76,10 +132,7 @@ export default function Home() {
                 Based in the UK, I&apos;m a front-end developer passionate about
                 building accessible web apps that users love.
               </p>
-              <a
-                href=""
-                className="text-base font-bold uppercase leading-[1.625] tracking-[2.286px] underline decoration-accent decoration-2 underline-offset-[10px]"
-              >
+              <a href="" className="btn-regular">
                 Contact me
               </a>
             </div>
@@ -124,14 +177,83 @@ export default function Home() {
             <hr className="sm:hidden" />
           </div>
         </section>
-        Projects Contact me Design portfolio HTML CSS View project View code
-        E-learning landing page HTML CSS View project View code Todo web app
-        HTML CSS JavaScript View project View code Entertainment web app HTML
-        CSS JavaScript View project View code Memory Game HTML CSS JavaScript
-        View project View code Art gallery showcase HTML CSS JavaScript View
-        project View code Contact I would love to hear about your project and
-        how I could help. Please fill in the form, and I’ll get back to you as
-        soon as possible. Name Email Message Send message adamkeyes
+        {/* Projects Section */}
+        <section>
+          <div className="wrapper">
+            <header className="mb-10 flex flex-row items-center justify-between">
+              <h2 className="heading-xl">Projects</h2>
+              <a href="" className="btn-regular">
+                Contact me
+              </a>
+            </header>
+            <div className="grid grid-cols-1 gap-10 pb-20 sm:grid-cols-2 sm:gap-x-5 sm:gap-y-14 sm:pb-24 lg:gap-y-16 lg:pb-28">
+              {projects.map((project: ProjectType) => (
+                <ProjectCard
+                  key={project.id}
+                  title={project.title}
+                  description={project.description}
+                  thumbnail={project.thumbnail}
+                  projectUrl="#"
+                  codeUrl="#"
+                />
+              ))}
+            </div>
+          </div>
+        </section>
+        {/* Contact section */}
+        <section className="bg-background-secondary">
+          <div className="wrapper">
+            <div className="flex flex-col items-center gap-12 pt-[3.75rem] lg:flex-row lg:items-start lg:justify-between lg:pt-[5.25rem]">
+              <div className="flex max-w-[27.8125rem] flex-grow flex-col gap-5 text-center lg:text-left">
+                <h2 className="heading-xl">Contact</h2>
+                <p className="text-secondary">
+                  I would love to hear about your project and how I could help.
+                  Please fill in the form, and I’ll get back to you as soon as
+                  possible.
+                </p>
+              </div>
+              <ContactForm />
+            </div>
+          </div>
+        </section>
+        {/* Footer */}
+        <footer className="bg-background-secondary">
+          <div className="wrapper">
+            <hr />
+            <nav className="relative z-10 pb-16 pt-10 sm:pb-10 sm:pt-8 lg:pb-24 lg:pt-12">
+              <ul className="flex flex-row flex-wrap justify-center gap-5 sm:gap-8 lg:mr-8">
+                <li className="flex-shrink-0 flex-grow basis-full text-center sm:me-auto sm:basis-0 sm:text-left">
+                  <a
+                    href=""
+                    className="[font-size:_clamp(1.5rem,0.7925rem+3.0189vw,2rem)]"
+                  >
+                    adamkeyes
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <IconGitHub />
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <IconFrontendMentor />
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <IconLinkedIn />
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <IconTwitter />
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </footer>
       </main>
     </>
   );
