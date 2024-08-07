@@ -193,8 +193,8 @@ export default function Home() {
                   title={project.title}
                   description={project.description}
                   thumbnail={project.thumbnail}
-                  projectUrl="#"
-                  codeUrl="#"
+                  projectUrl=""
+                  codeUrl=""
                 />
               ))}
             </div>
@@ -202,7 +202,12 @@ export default function Home() {
         </section>
         {/* Contact section */}
         <section className="bg-background-secondary">
-          <div className="wrapper">
+          <div className="wrapper relative">
+            <Image
+              src={patternRings}
+              alt=""
+              className="absolute bottom-[106px] left-0 -translate-x-1/3 sm:bottom-5 lg:bottom-16 lg:-translate-x-2/3"
+            />
             <div className="flex flex-col items-center gap-12 pt-[3.75rem] lg:flex-row lg:items-start lg:justify-between lg:pt-[5.25rem]">
               <div className="flex max-w-[27.8125rem] flex-grow flex-col gap-5 text-center lg:text-left">
                 <h2 className="heading-xl">Contact</h2>

@@ -90,7 +90,7 @@ function ContactForm() {
           </button>
         </div>
         {isMessage && (
-          <div className="absolute bottom-8 left-0 translate-x-1/2 text-accent transition">
+          <div className="absolute bottom-8 left-0 w-full text-center text-accent transition">
             Message sent successfully!
           </div>
         )}
