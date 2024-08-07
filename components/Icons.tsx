@@ -83,3 +83,13 @@ export function IconTwitter({ width = 24, height = 20, className }: IconProps) {
     </svg>
   );
 }
+
+export function IconError({}: IconProps) {
+  return (
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+      <circle cx="12" cy="12" r="11.5" stroke="#FF6F5B" />
+      <rect x="11" y="6" width="2" height="9" rx="1" fill="#FF6F5B" />
+      <rect x="11" y="17" width="2" height="2" rx="1" fill="#FF6F5B" />
+    </svg>
+  );
+}
