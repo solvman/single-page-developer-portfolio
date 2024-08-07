@@ -3,6 +3,7 @@ import { useForm } from "react-hook-form";
 
 import { cn } from "@/utils/utils";
 import FieldError from "@/components/FieldError";
+import useMessage from "@/hooks/use-message";
 
 const REQUIRED = "This field is required";
 
@@ -13,20 +14,23 @@ type ContactFormType = {
 };
 
 function ContactForm() {
+  const { isMessage, setIsMessage } = useMessage();
   const {
     register,
     handleSubmit,
+    reset,
     formState: { errors },
   } = useForm<ContactFormType>({
     defaultValues: { name: "", email: "", message: "" },
   });
 
   const onSubmit = (data: ContactFormType) => {
-    console.log(data);
+    setIsMessage(true);
+    reset();
   };
 
   return (
-    <div className="w-full max-w-[27.8125rem]">
+    <div className="relative w-full max-w-[27.8125rem]">
       <form onSubmit={handleSubmit(onSubmit)}>
         <div className="flex flex-grow flex-col gap-8 pb-[5.4375rem] lg:pb-[5.75rem]">
           <div className="relative">
@@ -85,6 +89,11 @@ function ContactForm() {
             Send message
           </button>
         </div>
+        {isMessage && (
+          <div className="absolute bottom-8 left-0 translate-x-1/2 text-accent transition">
+            Message sent successfully!
+          </div>
+        )}
       </form>
     </div>
   );
