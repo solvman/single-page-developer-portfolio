@@ -1,4 +1,6 @@
+"use client";
 import Image, { StaticImageData } from "next/image";
+import { motion } from "framer-motion";
 
 import HeroImage from "@/components/HeroImage";
 import ProjectCard from "@/components/ProjectCard";
@@ -65,6 +67,20 @@ const projects: ProjectType[] = [
   },
 ];
 
+function animateSideways(delay: number, side: "left" | "right" = "left") {
+  return {
+    hidden: { x: side === "left" ? -100 : 100, opacity: 0 },
+    visible: { x: 0, opacity: 1, transition: { duration: 0.75, delay } },
+  };
+}
+
+function animateDown(delay: number) {
+  return {
+    hidden: { y: -50, opacity: 0 },
+    visible: { y: 0, opacity: 1, transition: { duration: 0.75, delay } },
+  };
+}
+
 export default function Home() {
   return (
     <>
@@ -120,21 +136,37 @@ export default function Home() {
               className="absolute -left-1/2 top-[127px] -z-30 sm:left-0 sm:top-[86px] sm:-translate-x-1/2 lg:top-[66px]"
             />
             <div className="mb-20 mt-[331px] text-center sm:mb-[3.75rem] sm:mt-28 sm:max-w-[58vw] sm:text-left lg:mb-52 lg:mt-32 lg:max-w-[45rem]">
-              <h1 className="heading-xl mb-6 sm:mb-16">
+              <motion.h1
+                variants={animateSideways(0.75)}
+                initial="hidden"
+                animate="visible"
+                className="heading-xl mb-6 sm:mb-16"
+              >
                 Nice to
                 <br className="hidden sm:block lg:hidden" /> meet you! I&apos;m{" "}
                 <span className="underline decoration-accent decoration-4 underline-offset-[6px]">
                   Adam Keyes
                 </span>
                 .
-              </h1>
-              <p className="mb-6 text-secondary sm:mb-9 lg:max-w-[27rem]">
+              </motion.h1>
+              <motion.p
+                variants={animateSideways(1)}
+                initial="hidden"
+                animate="visible"
+                className="mb-6 text-secondary sm:mb-9 lg:max-w-[27rem]"
+              >
                 Based in the UK, I&apos;m a front-end developer passionate about
                 building accessible web apps that users love.
-              </p>
-              <a href="" className="btn-regular">
+              </motion.p>
+              <motion.a
+                href=""
+                variants={animateSideways(1.25)}
+                initial="hidden"
+                animate="visible"
+                className="btn-regular"
+              >
                 Contact me
-              </a>
+              </motion.a>
             </div>
             <hr />
           </div>
@@ -149,30 +181,60 @@ export default function Home() {
                 alt=""
                 className="absolute bottom-0 right-0 -z-10 translate-x-1/2 translate-y-1/2 lg:translate-x-3/4 lg:translate-y-0"
               />
-              <div>
+              <motion.div
+                variants={animateDown(0.75)}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+              >
                 <h3 className="heading-lg md:mb-[0.875rem]">HTML</h3>
                 <p className="text-secondary">4 Years Experience</p>
-              </div>
-              <div>
-                <h3 className="heading-lg md:mb-[0.875rem]">HTML</h3>
-                <p className="text-secondary">4 Years Experience</p>
-              </div>
-              <div>
+              </motion.div>
+              <motion.div
+                variants={animateDown(1)}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+              >
                 <h3 className="heading-lg md:mb-[0.875rem]">CSS</h3>
                 <p className="text-secondary">4 Years Experience</p>
-              </div>
-              <div>
+              </motion.div>
+              <motion.div
+                variants={animateDown(1.25)}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+              >
                 <h3 className="heading-lg md:mb-[0.875rem]">JavaScript</h3>
                 <p className="text-secondary">4 Years Experience</p>
-              </div>
-              <div>
+              </motion.div>
+              <motion.div
+                variants={animateDown(0.75)}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+              >
                 <h3 className="heading-lg md:mb-[0.875rem]">Accessibility</h3>
                 <p className="text-secondary">4 Years Experience</p>
-              </div>
-              <div>
+              </motion.div>
+              <motion.div
+                variants={animateDown(1)}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+              >
                 <h3 className="heading-lg md:mb-[0.875rem]">React</h3>
                 <p className="text-secondary">3 Years Experience</p>
-              </div>
+              </motion.div>
+              <motion.div
+                variants={animateDown(1.25)}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+              >
+                <h3 className="heading-lg md:mb-[0.875rem]">Sass</h3>
+                <p className="text-secondary">3 Years Experience</p>
+              </motion.div>
             </div>
             <hr className="sm:hidden" />
           </div>
@@ -181,22 +243,40 @@ export default function Home() {
         <section>
           <div className="wrapper">
             <header className="mb-10 flex flex-row items-center justify-between">
-              <h2 className="heading-xl">Projects</h2>
-              <a href="" className="btn-regular">
-                Contact me
-              </a>
+              <motion.h2
+                variants={animateSideways(0.75)}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                className="heading-xl"
+              >
+                Projects
+              </motion.h2>
+              <a className="btn-regular">Contact me</a>
             </header>
             <div className="grid grid-cols-1 gap-10 pb-20 sm:grid-cols-2 sm:gap-x-5 sm:gap-y-14 sm:pb-24 lg:gap-y-16 lg:pb-28">
-              {projects.map((project: ProjectType) => (
-                <ProjectCard
-                  key={project.id}
-                  title={project.title}
-                  description={project.description}
-                  thumbnail={project.thumbnail}
-                  projectUrl=""
-                  codeUrl=""
-                />
-              ))}
+              {projects.map((project: ProjectType) => {
+                const direction = project.id % 2 === 0 ? "right" : "left";
+                const delay = project.id * 0.25;
+
+                return (
+                  <motion.div
+                    variants={animateSideways(delay, direction)}
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true }}
+                    key={project.id}
+                  >
+                    <ProjectCard
+                      title={project.title}
+                      description={project.description}
+                      thumbnail={project.thumbnail}
+                      projectUrl=""
+                      codeUrl=""
+                    />
+                  </motion.div>
+                );
+              })}
             </div>
           </div>
         </section>
@@ -210,14 +290,36 @@ export default function Home() {
             />
             <div className="flex flex-col items-center gap-12 pt-[3.75rem] lg:flex-row lg:items-start lg:justify-between lg:pt-[5.25rem]">
               <div className="flex max-w-[27.8125rem] flex-grow flex-col gap-5 text-center lg:text-left">
-                <h2 className="heading-xl">Contact</h2>
-                <p className="text-secondary">
+                <motion.h2
+                  variants={animateSideways(0.75)}
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true }}
+                  className="heading-xl"
+                >
+                  Contact
+                </motion.h2>
+                <motion.p
+                  variants={animateSideways(1)}
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true }}
+                  className="text-secondary"
+                >
                   I would love to hear about your project and how I could help.
                   Please fill in the form, and I’ll get back to you as soon as
                   possible.
-                </p>
+                </motion.p>
               </div>
-              <ContactForm />
+              <motion.div
+                variants={animateSideways(1.25, "right")}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                className="w-full max-w-[27.8125rem]"
+              >
+                <ContactForm />
+              </motion.div>
             </div>
           </div>
         </section>

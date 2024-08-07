@@ -1,4 +1,8 @@
+/* eslint-disable @next/next/no-img-element */
 /* eslint-disable jsx-a11y/alt-text */
+"use client";
+import { motion } from "framer-motion";
+
 import mobileImage from "@/assets/images/image-profile-mobile.webp";
 import tabletImage from "@/assets/images/image-profile-tablet.webp";
 import desktopImage from "@/assets/images/image-profile-desktop.webp";
@@ -38,7 +42,11 @@ function HeroImage() {
   });
 
   return (
-    <picture>
+    <motion.picture
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 1.5, transition: "easeInOut" }}
+    >
       <source media="(min-width: 1025px)" srcSet={desktop} />
       <source media="(min-width: 640px)" srcSet={tablet} />
       <source srcSet={mobile} />
@@ -46,7 +54,7 @@ function HeroImage() {
         {...rest}
         className="absolute left-1/2 top-0 -z-20 h-auto w-[174px] -translate-x-1/2 sm:left-auto sm:right-0 sm:w-[322px] sm:translate-x-0 lg:bottom-[68px] lg:top-auto lg:w-[445px]"
       />
-    </picture>
+    </motion.picture>
   );
 }
 export default HeroImage;
