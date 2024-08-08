@@ -3,6 +3,10 @@
 @tailwind utilities;
 
 @layer base {
+  :focus-visible {
+    @apply outline-dashed outline-2 outline-offset-[10px] outline-accent;
+  }
+
   a {
     @apply text-primary transition duration-200 hover:text-accent;
   }

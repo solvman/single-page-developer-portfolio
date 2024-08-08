@@ -97,7 +97,7 @@ export default function Home() {
                 </a>
               </li>
               <li>
-                <a href="">
+                <a href="" className="has-[:focus-visible]:outline-accent">
                   <IconGitHub />
                 </a>
               </li>

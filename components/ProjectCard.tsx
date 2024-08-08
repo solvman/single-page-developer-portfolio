@@ -19,7 +19,7 @@ function ProjectCard({
     <article>
       <div className="group relative">
         <Image src={thumbnail} alt={title} className="group mb-5" />
-        <div className="bg-black/75 absolute inset-0 hidden cursor-pointer flex-col items-center justify-center gap-12 opacity-0 transition-all duration-300 group-hover:opacity-100 lg:flex">
+        <div className="absolute inset-0 hidden cursor-pointer flex-col items-center justify-center gap-12 bg-black/75 opacity-0 transition-all duration-300 group-hover:opacity-100 has-[:focus-visible]:opacity-100 has-[focus-visible]:opacity-100 lg:flex">
           <a href={projectUrl} className="btn-regular">
             View project
           </a>
