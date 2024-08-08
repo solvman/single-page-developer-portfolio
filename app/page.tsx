@@ -159,7 +159,7 @@ export default function Home() {
                 building accessible web apps that users love.
               </motion.p>
               <motion.a
-                href="#"
+                href="#contact"
                 variants={animateSideways(1)}
                 initial="hidden"
                 animate="visible"
@@ -252,7 +252,9 @@ export default function Home() {
               >
                 Projects
               </motion.h2>
-              <a className="btn-regular">Contact me</a>
+              <a className="btn-regular" href="#contact">
+                Contact me
+              </a>
             </header>
             <div className="grid grid-cols-1 gap-10 pb-20 sm:grid-cols-2 sm:gap-x-5 sm:gap-y-14 sm:pb-24 lg:gap-y-16 lg:pb-28">
               {projects.map((project: ProjectType) => {
@@ -281,7 +283,7 @@ export default function Home() {
           </div>
         </section>
         {/* Contact section */}
-        <section className="bg-background-secondary">
+        <section className="bg-background-secondary" id="contact">
           <div className="wrapper relative">
             <Image
               src={patternRings}
