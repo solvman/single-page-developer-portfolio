@@ -86,7 +86,10 @@ export default function Home() {
     <>
       <header>
         <div className="wrapper">
-          <nav className="relative z-10 mt-5 sm:mt-[1.875rem]">
+          <nav
+            id="header-navigation"
+            className="relative z-10 mt-5 sm:mt-[1.875rem]"
+          >
             <ul className="flex flex-row flex-wrap justify-center gap-5 sm:gap-8 lg:mr-8">
               <li className="flex-shrink-0 flex-grow basis-full text-center sm:me-auto sm:basis-0 sm:text-left">
                 <a
