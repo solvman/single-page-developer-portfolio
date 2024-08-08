@@ -70,14 +70,14 @@ const projects: ProjectType[] = [
 function animateSideways(delay: number, side: "left" | "right" = "left") {
   return {
     hidden: { x: side === "left" ? -100 : 100, opacity: 0 },
-    visible: { x: 0, opacity: 1, transition: { duration: 0.75, delay } },
+    visible: { x: 0, opacity: 1, transition: { duration: 0.5, delay } },
   };
 }
 
 function animateDown(delay: number) {
   return {
     hidden: { y: -50, opacity: 0 },
-    visible: { y: 0, opacity: 1, transition: { duration: 0.75, delay } },
+    visible: { y: 0, opacity: 1, transition: { duration: 0.5, delay } },
   };
 }
 
@@ -137,7 +137,7 @@ export default function Home() {
             />
             <div className="mb-20 mt-[331px] text-center sm:mb-[3.75rem] sm:mt-28 sm:max-w-[58vw] sm:text-left lg:mb-52 lg:mt-32 lg:max-w-[45rem]">
               <motion.h1
-                variants={animateSideways(0.75)}
+                variants={animateSideways(0.5)}
                 initial="hidden"
                 animate="visible"
                 className="heading-xl mb-6 sm:mb-16"
@@ -150,7 +150,7 @@ export default function Home() {
                 .
               </motion.h1>
               <motion.p
-                variants={animateSideways(1)}
+                variants={animateSideways(0.75)}
                 initial="hidden"
                 animate="visible"
                 className="mb-6 text-secondary sm:mb-9 lg:max-w-[27rem]"
@@ -160,7 +160,7 @@ export default function Home() {
               </motion.p>
               <motion.a
                 href=""
-                variants={animateSideways(1.25)}
+                variants={animateSideways(1)}
                 initial="hidden"
                 animate="visible"
                 className="btn-regular"
@@ -182,7 +182,7 @@ export default function Home() {
                 className="absolute bottom-0 right-0 -z-10 translate-x-1/2 translate-y-1/2 lg:translate-x-3/4 lg:translate-y-0"
               />
               <motion.div
-                variants={animateDown(0.75)}
+                variants={animateDown(0.25)}
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true }}
@@ -191,7 +191,7 @@ export default function Home() {
                 <p className="text-secondary">4 Years Experience</p>
               </motion.div>
               <motion.div
-                variants={animateDown(1)}
+                variants={animateDown(0.5)}
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true }}
@@ -200,7 +200,7 @@ export default function Home() {
                 <p className="text-secondary">4 Years Experience</p>
               </motion.div>
               <motion.div
-                variants={animateDown(1.25)}
+                variants={animateDown(0.75)}
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true }}
@@ -209,7 +209,7 @@ export default function Home() {
                 <p className="text-secondary">4 Years Experience</p>
               </motion.div>
               <motion.div
-                variants={animateDown(0.75)}
+                variants={animateDown(0.25)}
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true }}
@@ -218,7 +218,7 @@ export default function Home() {
                 <p className="text-secondary">4 Years Experience</p>
               </motion.div>
               <motion.div
-                variants={animateDown(1)}
+                variants={animateDown(0.5)}
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true }}
@@ -227,7 +227,7 @@ export default function Home() {
                 <p className="text-secondary">3 Years Experience</p>
               </motion.div>
               <motion.div
-                variants={animateDown(1.25)}
+                variants={animateDown(0.75)}
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true }}
@@ -244,7 +244,7 @@ export default function Home() {
           <div className="wrapper">
             <header className="mb-10 flex flex-row items-center justify-between">
               <motion.h2
-                variants={animateSideways(0.75)}
+                variants={animateSideways(0.25)}
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true }}
@@ -257,7 +257,7 @@ export default function Home() {
             <div className="grid grid-cols-1 gap-10 pb-20 sm:grid-cols-2 sm:gap-x-5 sm:gap-y-14 sm:pb-24 lg:gap-y-16 lg:pb-28">
               {projects.map((project: ProjectType) => {
                 const direction = project.id % 2 === 0 ? "right" : "left";
-                const delay = project.id * 0.25;
+                const delay = direction === "left" ? 0.25 : 0.5;
 
                 return (
                   <motion.div
@@ -291,7 +291,7 @@ export default function Home() {
             <div className="flex flex-col items-center gap-12 pt-[3.75rem] lg:flex-row lg:items-start lg:justify-between lg:pt-[5.25rem]">
               <div className="flex max-w-[27.8125rem] flex-grow flex-col gap-5 text-center lg:text-left">
                 <motion.h2
-                  variants={animateSideways(0.75)}
+                  variants={animateSideways(0.25)}
                   initial="hidden"
                   whileInView="visible"
                   viewport={{ once: true }}
@@ -300,7 +300,7 @@ export default function Home() {
                   Contact
                 </motion.h2>
                 <motion.p
-                  variants={animateSideways(1)}
+                  variants={animateSideways(0.5)}
                   initial="hidden"
                   whileInView="visible"
                   viewport={{ once: true }}
@@ -312,7 +312,7 @@ export default function Home() {
                 </motion.p>
               </div>
               <motion.div
-                variants={animateSideways(1.25, "right")}
+                variants={animateSideways(0.75, "right")}
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true }}

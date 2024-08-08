@@ -45,7 +45,7 @@ function HeroImage() {
     <motion.picture
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      transition={{ duration: 1.5, transition: "easeInOut" }}
+      transition={{ duration: 0.5, transition: "easeInOut" }}
     >
       <source media="(min-width: 1025px)" srcSet={desktop} />
       <source media="(min-width: 640px)" srcSet={tablet} />
