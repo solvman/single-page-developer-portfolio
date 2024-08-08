@@ -90,29 +90,29 @@ export default function Home() {
             <ul className="flex flex-row flex-wrap justify-center gap-5 sm:gap-8 lg:mr-8">
               <li className="flex-shrink-0 flex-grow basis-full text-center sm:me-auto sm:basis-0 sm:text-left">
                 <a
-                  href=""
+                  href="#"
                   className="[font-size:_clamp(1.5rem,0.7925rem+3.0189vw,2rem)]"
                 >
                   adamkeyes
                 </a>
               </li>
               <li>
-                <a href="">
+                <a href="#">
                   <IconGitHub />
                 </a>
               </li>
               <li>
-                <a href="">
+                <a href="#">
                   <IconFrontendMentor />
                 </a>
               </li>
               <li>
-                <a href="">
+                <a href="#">
                   <IconLinkedIn />
                 </a>
               </li>
               <li>
-                <a href="">
+                <a href="#">
                   <IconTwitter />
                 </a>
               </li>
@@ -159,7 +159,7 @@ export default function Home() {
                 building accessible web apps that users love.
               </motion.p>
               <motion.a
-                href=""
+                href="#"
                 variants={animateSideways(1)}
                 initial="hidden"
                 animate="visible"
@@ -331,29 +331,29 @@ export default function Home() {
               <ul className="flex flex-row flex-wrap justify-center gap-5 sm:gap-8 lg:mr-8">
                 <li className="flex-shrink-0 flex-grow basis-full text-center sm:me-auto sm:basis-0 sm:text-left">
                   <a
-                    href=""
+                    href="#"
                     className="[font-size:_clamp(1.5rem,0.7925rem+3.0189vw,2rem)]"
                   >
                     adamkeyes
                   </a>
                 </li>
                 <li>
-                  <a href="">
+                  <a href="#">
                     <IconGitHub />
                   </a>
                 </li>
                 <li>
-                  <a href="">
+                  <a href="#">
                     <IconFrontendMentor />
                   </a>
                 </li>
                 <li>
-                  <a href="">
+                  <a href="#">
                     <IconLinkedIn />
                   </a>
                 </li>
                 <li>
-                  <a href="">
+                  <a href="#">
                     <IconTwitter />
                   </a>
                 </li>
