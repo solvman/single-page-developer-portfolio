@@ -16,7 +16,7 @@ export function IconFrontendMentor({
       width="26"
       height="23"
       viewBox={`0 0 ${width} ${height}`}
-      className={cn("fill-white", className)}
+      className={cn("fill-white inline-block", className)}
       role="img"
       aria-labelledby="FrontendMentor"
     >
@@ -32,7 +32,7 @@ export function IconGitHub({ width = 25, height = 24, className }: IconProps) {
       width={width}
       height={height}
       viewBox={`0 0 ${width} ${height}`}
-      className={cn("fill-white", className)}
+      className={cn("fill-white inline-block", className)}
       role="img"
       aria-labelledby="GitHub"
     >
@@ -55,7 +55,7 @@ export function IconLinkedIn({
       width={width}
       height={height}
       viewBox={`0 0 ${width} ${height}`}
-      className={cn("fill-white", className)}
+      className={cn("fill-white inline-block", className)}
       role="img"
       aria-labelledby="LinkedIn"
     >
@@ -74,7 +74,7 @@ export function IconTwitter({ width = 24, height = 20, className }: IconProps) {
       width={width}
       height={height}
       viewBox={`0 0 ${width} ${height}`}
-      className={cn("fill-white", className)}
+      className={cn("fill-white inline-block", className)}
       role="img"
       aria-labelledby="Twitter"
     >
