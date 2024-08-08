@@ -88,6 +88,7 @@ export default function Home() {
         <div className="wrapper">
           <nav
             id="header-navigation"
+            aria-label="Main navigation"
             className="relative z-10 mt-5 sm:mt-[1.875rem]"
           >
             <ul className="flex flex-row flex-wrap justify-center gap-5 sm:gap-8 lg:mr-8">
@@ -332,7 +333,11 @@ export default function Home() {
         <footer className="bg-background-secondary">
           <div className="wrapper">
             <hr />
-            <nav className="relative z-10 pb-16 pt-10 sm:pb-10 sm:pt-8 lg:pb-24 lg:pt-12">
+            <nav
+              id="footer-navigation"
+              aria-label="Footer navigation"
+              className="relative z-10 pb-16 pt-10 sm:pb-10 sm:pt-8 lg:pb-24 lg:pt-12"
+            >
               <ul className="flex flex-row flex-wrap justify-center gap-5 sm:gap-8 lg:mr-8">
                 <li className="flex-shrink-0 flex-grow basis-full text-center sm:me-auto sm:basis-0 sm:text-left">
                   <a
