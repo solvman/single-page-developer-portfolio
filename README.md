@@ -31,8 +31,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [https://github.com/solvman/single-page-developer-portfolio](https://github.com/solvman/single-page-developer-portfolio)
+- Live Site URL: [https://sweet-empanada-d07576.netlify.app/](https://sweet-empanada-d07576.netlify.app/)
 
 ## My process
 
